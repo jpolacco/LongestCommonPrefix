@@ -1,32 +1,25 @@
-
 /**
- * Write a description of class sdfdsf here.
- *
+ * Utility class for finding the longest common prefix among strings.
+ 
  * @author (your name)
- * @version (a version number or a date)
+ * @version (date)
  */
 public class Prefix
 {
+    /**
+     * Finds the longest common prefix  string (case sensitive) amongst an array of strings.
+     *
+     * <p><strong>Examples:</strong></p>
+     * <ul>
+     *   <li>{@code ["flower", "flow", "flight"]} returns {@code "fl"}</li>
+     *   <li>{@code ["dog", "racecar", "car"]} returns {@code ""}</li>
+     *   <li>{@code ["test", "test", "test"]} returns {@code "test"}</li>
+     * </ul>
+     * 
+     * @param strs array of strings to compare; may be null or empty
+     * @return the longest common prefix, or empty string if none exists
+     */
     public String longestCommonPrefix(String[] strs) {
-        // Handle edge case
-        if (strs == null || strs.length == 0) {
-            return "";
-        }
-        
-        // Compare character by character at each position
-        for (int i = 0; i < strs[0].length(); i++) {
-            char currentChar = strs[0].charAt(i);
-            
-            // Check this character against all other strings
-            for (int j = 1; j < strs.length; j++) {
-                // If we've reached the end of a string OR characters don't match
-                if (i >= strs[j].length() || strs[j].charAt(i) != currentChar) {
-                    return strs[0].substring(0, i);
-                }
-            }
-        }
-        
-        // If we get here, the entire first string is the common prefix
-        return strs[0];
+        //TO-DO: your code here
     }
 }
